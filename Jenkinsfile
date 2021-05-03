@@ -7,5 +7,11 @@ pipeline {
                 git 'https://github.com/Vinuthna1804/VProfile.git'
             }
         }
+    stages {
+        stage('maven build') {
+            steps {
+                sh 'mvn package'
+            }
+        }
     }
 }
